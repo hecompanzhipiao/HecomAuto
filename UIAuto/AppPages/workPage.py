@@ -9,7 +9,7 @@ from .Page import *
 class workPage(Page):
     """docstring for workPage"""
     def __init__(self,driver):
-        self._driver=driver
+        super(workPage,self).__init__(driver)
     #获得 工作管理  日程办公 里的工作项等对象 没有返回空, 名字相同时category必填
     def isCategoryExist(self,name):
         pass

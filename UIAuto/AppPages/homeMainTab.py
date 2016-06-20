@@ -1,3 +1,4 @@
+# coding:utf-8
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -6,7 +7,7 @@ from .workPage import *
 
 class homeMainTab(object):
     def __init__(self,driver):
-        self._driver=driver
+        super(homeMainTab,self).__init__(driver)
         WebDriverWait(self._driver, 10).until(EC.presence_of_element_located((By.ID, 'com.hecom.sales:id/btn_maintab_work')))
         #....
 
